@@ -28,8 +28,19 @@ app.use((req, res, next) => {
   }
 });
 
-app.use(cors());
+// app.use(cors());
 app.use(morgan('dev'));
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", 
+      "https://franzoo-bowl.vercel.app/"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.get('/health', (req, res) => res.json({ ok: true, time: new Date().toISOString() }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
