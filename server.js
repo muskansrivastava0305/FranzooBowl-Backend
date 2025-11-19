@@ -35,7 +35,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", 
-      "https://franzoo-bowl.vercel.app/"
+      "https://www.kanvifoodsandcompany.com/"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
