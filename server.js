@@ -35,7 +35,9 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", 
-      "https://www.kanvifoodsandcompany.com/"
+      "https://www.kanvifoodsandcompany.com/",
+       "https://franzobowl.kandatechnology.com"
+
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
